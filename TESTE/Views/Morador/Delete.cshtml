@@ -1,0 +1,95 @@
+﻿@model TESTE.Models.Morador
+
+@{
+    ViewData["Title"] = "Deletar Morador";
+}
+
+<div class="box-shadow p-5">
+    <h1 class="mb-3">Deletar</h1>
+
+    <h3 class="mb-5">Tem certeza que deseja excluir este Morador?</h3>
+    <div>
+        @*<h4>Morador</h4>*@
+        @*<dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Nome)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Nome)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Cpf)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Cpf)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Apt)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Apt)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Bloco)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Bloco)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Dependentes)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Dependentes)
+            </dd>
+        </dl>*@
+
+    <table class="table table-hover mb-4">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cpf)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Apt)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Bloco)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Dependentes)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>
+                    @Html.DisplayFor(model => model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayFor(model => model.Cpf)
+                </th>
+                <th>
+                    @Html.DisplayFor(model => model.Apt)
+                </th>
+                <th>
+                    @Html.DisplayFor(model => model.Bloco)
+                </th>
+                <th>
+                    @Html.DisplayFor(model => model.Dependentes)
+                </th>
+            </tr>
+        </tbody>
+    </table>
+
+        <form asp-action="Delete" class="mb-3">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Deletar" class="btn btn-danger" /> 
+        </form>
+        <div class="form-group  ">
+            <button class="btn btn-primary"><a style="color:white; text-decoration:none;" asp-action="Index">Voltar para lista</a></button>
+        </div>
+    </div>
+</div>
